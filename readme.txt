@@ -13,7 +13,9 @@ Login page designer provides you to easy way to customize the appearance of the 
 ==Description==
 Login page designer provides you to easy way to customize the appearance of the wordPress login page with many options. Login Page Designer plugin have many option for customizing login page.
 You can easy way to setting & install this plugin.
+
 <strong>Features</strong>
+
 * Plugin on or off.
 * Change Logo Title.
 * Hide Logo
