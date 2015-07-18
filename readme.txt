@@ -15,7 +15,7 @@ Login page designer provides you to easy way to customize the appearance of the 
 
 You can easy way to setting & install this plugin.
  
-<strong>Features</strong
+<strong>Features</strong>
 
 * Plugin on or off.
 * Change Logo Title.
