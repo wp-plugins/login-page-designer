@@ -195,6 +195,7 @@ add_action( 'admin_enqueue_scripts', 'wlpd_add_color_picker' );//add color picke
 <div class='wrap'> 
 	<h1><?php _e('Login Page Designer Options'); ?><a style="text-decoration:none;" href="http://www.wpchandra.com/" target="_blank"><span style="color: rgba(10, 154, 62, 1);"> (Upgrade to Pro Version)</span></a></h1>
 	<p class="description"><?php _e('Login page designer provides you to easy way to customize the appearance of the wordPress login page with many options. <a href="https://profiles.wordpress.org/chandrakeshkumar" target="_blank"> click here for more plugins</a> .'); ?></p>
+	<?php include('inc/social-media.php'); ?>
 	<?php
 	$active_tab = isset($_GET['tab']) ? $_GET['tab'] : 'display_settings';
 	if(isset($_GET['tab'])) $active_tab = $_GET['tab'];
