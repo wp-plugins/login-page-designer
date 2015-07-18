@@ -14,6 +14,13 @@ function login_page_designer_featured_plugins(){
 						'title'			=>	'Facebook Like Box Widget',
 						'description'	=>	'Using Facebook like box widget easy and quick in your blog. This Plugin support you to customize facebook like box in easy way.'
 						),
+						
+			'wpchandra-google-plus-widget'=>array(
+						'image_url'		=>	wlpd_plugin_url.'images/featured_plugins/wpchandra-google-plus-widget.png',
+						'site_url'		=>	'https://wordpress.org/plugins/wp-google-plus-badge-widget/',
+						'title'			=>	'Google+ Badge Widget',
+						'description'	=>	'Our Google+ badge widget plugin will help you to display Google+ badge widget on your wordpress wesite, just add google+ badge widget to your sidebar and use it. '
+						),
 			
 			'wp-awesome-recent-posts-widget'=>array(
 						'image_url'		=>	wlpd_plugin_url.'images/featured_plugins/wp-awesome-recent-posts-widget.png',
