@@ -95,6 +95,9 @@ There are no FAQ just yet
 20. Login form style7
 21. Login form style8
 22. Login form style9
+23. Login form style10
+24. Login form style11
+25. Login form style12
 
 
 == Changelog ==
