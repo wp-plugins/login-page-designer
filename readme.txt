@@ -85,7 +85,7 @@ There are no FAQ just yet
 9. Login page with background color & logo
 10. Login page blue background color & logo
 11. Login form style1
-12. Login form style2
+12. Login form style2 
 13. Login form style3
 14. Login form style5
 15. Login page with green background color
