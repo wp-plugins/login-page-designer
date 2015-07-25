@@ -11,7 +11,7 @@
  
 define('wlpd_blog_name',get_bloginfo('name')); 
 define('wlpd_site_url',get_site_url());
-define('wlpd_plugin_url',plugins_url( '/', __FILE__ ));
+define('wlpd_plugin_url',plugins_url( '/', __FILE__ )); 
 
 function wp_login_page_designer_menu(){
     add_menu_page('Login Designer', 'Login Designer', 'manage_options', 'login-page-designer', 'wlpd_login_designer_settings_page',plugins_url( 'images/menu_icon.png', __FILE__ ) );
