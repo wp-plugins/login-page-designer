@@ -17,7 +17,7 @@ function wp_login_page_designer_menu(){
     add_menu_page('Login Designer', 'Login Designer', 'manage_options', 'login-page-designer', 'wlpd_login_designer_settings_page',plugins_url( 'images/menu_icon.png', __FILE__ ) );
     add_submenu_page('login-page-designer', 'Featured Plugins', 'Featured Plugins', 'manage_options', 'wp-login-page-designer-featured-plugins' ,'login_page_designer_featured_plugins');
 	add_action( 'admin_init', 'wlpd_login_designer_settings' ); 
-}
+} 
 
 function wlpd_login_designer_settings() { //register settings
 
