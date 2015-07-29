@@ -1,6 +1,6 @@
 <?php
 /* 
- *Plugin Name: Login Page Designer
+ *Plugin Name: Login Page Designer 
  *Plugin URI: https://wordpress.org/plugins/login-page-designer/ 
  *Description: Login page designer provides you to easy way to customize the appearance of the wordPress login page with many options.
  *Version: 1.0
@@ -33,15 +33,11 @@ function wlpd_login_designer_settings() { //register settings
 	register_setting( 'wlpd-diaplay-settings-group', 'wlpd_login_background_image');
 	register_setting( 'wlpd-diaplay-settings-group', 'wlpd_login_link_color');
 	register_setting( 'wlpd-diaplay-settings-group', 'wlpd_login_link_hover_color');
-	
-	
 	register_setting( 'wlpd-logo-settings-group', 'wlpd_login_logo_title');
 	register_setting( 'wlpd-logo-settings-group', 'wlpd_login_link' );
 	register_setting( 'wlpd-logo-settings-group', 'wlpd_login_form_logo' );
 	register_setting( 'wlpd-logo-settings-group', 'wlpd_login_form_logo_width' );
 	register_setting( 'wlpd-logo-settings-group', 'wlpd_login_form_logo_height' );
-	
-	
 	register_setting( 'wlpd-form-button-group', 'wlpd_login_form_submit_bg' );
 	register_setting( 'wlpd-form-button-group', 'wlpd_login_form_submit_border_width' );
 	register_setting( 'wlpd-form-button-group', 'wlpd_login_form_submit_border_color' );
@@ -49,8 +45,6 @@ function wlpd_login_designer_settings() { //register settings
 	register_setting( 'wlpd-form-button-group', 'wlpd_login_form_submit_hover_bg' );
 	register_setting( 'wlpd-form-button-group', 'wlpd_login_form_submit_hover_border_width' );
 	register_setting( 'wlpd-form-button-group', 'wlpd_login_form_submit_hover_border_color' );
-	
-	
 	register_setting( 'wlpd-form-textbox-group', 'wlpd_login_form_textbox_bg' );
 	register_setting( 'wlpd-form-textbox-group', 'wlpd_login_form_textbox_border_width' );
 	register_setting( 'wlpd-form-textbox-group', 'wlpd_login_form_textbox_border_color' );
@@ -58,8 +52,6 @@ function wlpd_login_designer_settings() { //register settings
 	register_setting( 'wlpd-form-textbox-group', 'wlpd_login_form_textbox_hover_bg' );
 	register_setting( 'wlpd-form-textbox-group', 'wlpd_login_form_textbox_hover_border_width' );
 	register_setting( 'wlpd-form-textbox-group', 'wlpd_login_form_textbox_hover_border_color' );
-	
-	
 	register_setting( 'wlpd-form-settings-group', 'wlpd_login_form_bg' );
 	register_setting( 'wlpd-form-settings-group', 'wlpd_login_form_border_size' );
 	register_setting( 'wlpd-form-settings-group', 'wlpd_login_form_border_color' );
