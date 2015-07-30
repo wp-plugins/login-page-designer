@@ -8,7 +8,7 @@
  *Author URI:http://www.wpchandra.com/      
  *License: GPLv2  
  */       
-  
+   
 define('wlpd_blog_name',get_bloginfo('name'));   
 define('wlpd_site_url',get_site_url());
 define('wlpd_plugin_url',plugins_url( '/', __FILE__ )); 
