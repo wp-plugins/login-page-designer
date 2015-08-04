@@ -1,23 +1,23 @@
 <?php
 /* 
- *Plugin Name: Login Page Designer 
- *Plugin URI: https://wordpress.org/plugins/login-page-designer/ 
- *Description: Login page designer provides you to easy way to customize the appearance of the wordPress login page with many options. 
- *Version: 1.0
- *Author: Chandrakesh Kumar    
- *Author URI:http://www.wpchandra.com/        
- *License: GPLv2  
- */       
-   
-define('wlpd_blog_name',get_bloginfo('name'));   
+ *Plugin Name: Login Page Designer
+ *Plugin URI: https://wordpress.org/plugins/login-page-designer/
+ *Description: Login page designer provides you to easy way to customize the appearance of the wordPress login page with many options.
+ *Version: 1.1
+ *Author: Chandrakesh Kumar
+ *Author URI:http://www.wpchandra.com/
+ *License: GPLv2
+ */
+ 
+define('wlpd_blog_name',get_bloginfo('name'));
 define('wlpd_site_url',get_site_url());
-define('wlpd_plugin_url',plugins_url( '/', __FILE__ )); 
+define('wlpd_plugin_url',plugins_url( '/', __FILE__ ));
 
 function wp_login_page_designer_menu(){
     add_menu_page('Login Designer', 'Login Designer', 'manage_options', 'login-page-designer', 'wlpd_login_designer_settings_page',plugins_url( 'images/menu_icon.png', __FILE__ ) );
     add_submenu_page('login-page-designer', 'Featured Plugins', 'Featured Plugins', 'manage_options', 'wp-login-page-designer-featured-plugins' ,'login_page_designer_featured_plugins');
-	add_action( 'admin_init', 'wlpd_login_designer_settings' ); 
-} 
+	add_action( 'admin_init', 'wlpd_login_designer_settings' );
+}
 
 function wlpd_login_designer_settings() { //register settings
 
@@ -66,42 +66,42 @@ function wlpd_login_designer_activate() { //add default setting values on activa
     add_option( 'wlpd_login_on_or_off', 1, '', 1 );
 	add_option( 'wlpd_login_hide_logo', 0, '', 0 );
 	add_option( 'wlpd_login_hide_error_msg', 0, '', 0 );
-	add_option( 'wlpd_login_background_color', '#00aeef', '', '#00aeef' );
-	add_option( 'wlpd_login_background_image', '', '', '' );
+	add_option( 'wlpd_login_background_color', 'rgba(0, 0, 0, 0.34)', '', 'rgba(0, 0, 0, 0.34)' );
+	add_option( 'wlpd_login_background_image', wlpd_plugin_url.'images/bg/bg.jpg', '', wlpd_plugin_url.'images/bg/bg.jpg' );
 	add_option( 'wlpd_login_link_color', '#ffffff', '', '#ffffff' );
-	add_option( 'wlpd_login_link_hover_color', '#5BD0FC', '', '#5BD0FC' );
+	add_option( 'wlpd_login_link_hover_color', 'rgba(234, 234, 234, 0.52)', '', 'rgba(234, 234, 234, 0.52)' );
 	add_option( 'wlpd_login_form_margin_top', '6', '', '6');
 	add_option( 'wlpd_login_logo_title', wlpd_blog_name, '', wlpd_blog_name  );
 	add_option( 'wlpd_login_link', wlpd_site_url, '',  wlpd_site_url );
-	add_option( 'wlpd_login_form_bg', '#00aeef', '', '#00aeef' );
-	add_option( 'wlpd_login_hide_lost_password', 0, '', 0 );
-	add_option( 'wlpd_login_hide_back_to', 0, '', 0 );
+	add_option( 'wlpd_login_form_bg', 'rgba(0, 0, 0, 0.34)', '', 'rgba(0, 0, 0, 0.34)' );
+	add_option( 'wlpd_login_hide_lost_password', 1, '', 1 );
+	add_option( 'wlpd_login_hide_back_to', 1, '', 1 );
 	add_option( 'wlpd_login_desable_shake', 0, '', 0 );
 	add_option( 'wlpd_login_change_login_redirect', wlpd_site_url, '', wlpd_site_url );
 	add_option( 'wlpd_login_set_remember_me', 1, '', 1 );
-	add_option( 'wlpd_login_form_border_size', 2, '', 2 );
-	add_option( 'wlpd_login_form_border_color', '#5BD0FC', '', '#5BD0FC');
-	add_option( 'wlpd_login_form_border_radius', 10, '', 10 );
+	add_option( 'wlpd_login_form_border_size', 1, '', 1);
+	add_option( 'wlpd_login_form_border_color', 'rgba(234, 234, 234, 0.52)', '', 'rgba(234, 234, 234, 0.52)');
+	add_option( 'wlpd_login_form_border_radius', 0, '', 0 );
 	add_option( 'wlpd_login_form_label_size', 14, '', 14 );
 	add_option( 'wlpd_login_form_label_color', '#ffffff', '', '#ffffff' );
 	add_option( 'wlpd_login_form_label_bold', 0, '', 0 );
 	add_option( 'wlpd_login_form_logo', wlpd_plugin_url.'images/logo.png', '', wlpd_plugin_url.'images/logo.png' );
 	add_option( 'wlpd_login_form_logo_width', 84, '', 84 );
 	add_option( 'wlpd_login_form_logo_height', 84, '', 84 );
-	add_option( 'wlpd_login_form_submit_bg', '#00aeef', '', '#00aeef' );
+	add_option( 'wlpd_login_form_submit_bg', 'rgba(0, 0, 0, 0.34)', '', 'rgba(0, 0, 0, 0.34)' );
 	add_option( 'wlpd_login_form_submit_border_width', 1, '', 1 );
-	add_option( 'wlpd_login_form_submit_border_color', '#0080B0', '', '#0080B0' );
+	add_option( 'wlpd_login_form_submit_border_color', 'rgba(234, 234, 234, 0.52)', '', 'rgba(234, 234, 234, 0.52)' );
 	add_option( 'wlpd_login_form_submit_hover_bg', '#029CD5', '', '#029CD5' );
 	add_option( 'wlpd_login_form_submit_hover_border_width', 1, '', 1 );
-	add_option( 'wlpd_login_form_submit_hover_border_color', '#5F5F5F', '', '#5F5F5F' );
-	add_option( 'wlpd_login_form_textbox_bg', '#00aeef', '', '#00aeef' );
+	add_option( 'wlpd_login_form_submit_hover_border_color', 'rgba(234, 234, 234, 0.52)', '', 'rgba(234, 234, 234, 0.52)' );
+	add_option( 'wlpd_login_form_textbox_bg', 'rgba(0, 0, 0, 0.34)', '', 'rgba(0, 0, 0, 0.34)' );
 	add_option( 'wlpd_login_form_textbox_border_width', 1, '', 1 );
-	add_option( 'wlpd_login_form_textbox_border_color', '#5BD0FC', '', '#5BD0FC' );
-	add_option( 'wlpd_login_form_textbox_hover_bg', '#029CD5', '', '#029CD5' );
+	add_option( 'wlpd_login_form_textbox_border_color', 'rgba(234, 234, 234, 0.52)', '', 'rgba(234, 234, 234, 0.52)' );
+	add_option( 'wlpd_login_form_textbox_hover_bg', 'rgba(234, 234, 234, 0.52)', '', 'rgba(234, 234, 234, 0.52)' );
 	add_option( 'wlpd_login_form_textbox_hover_border_width', 1, '', 1 );
-	add_option( 'wlpd_login_form_textbox_hover_border_color', '#5F5F5F', '', '#5F5F5F' );
-	add_option( 'wlpd_login_form_submit_border_radius', 3, '', 3 );
-	add_option( 'wlpd_login_form_textbox_border_radius', 3, '', 3 );
+	add_option( 'wlpd_login_form_textbox_hover_border_color', 'rgba(234, 234, 234, 0.52)', '', 'rgba(234, 234, 234, 0.52)' );
+	add_option( 'wlpd_login_form_submit_border_radius', 0, '', 0 );
+	add_option( 'wlpd_login_form_textbox_border_radius', 0, '', 0 );
 }
 function wlpd_login_designer_deactivate() { //delete setting and values on deactivation
     delete_option( 'wlpd_login_on_or_off');
@@ -154,6 +154,7 @@ function wlpd_add_color_picker( $hook_suffix ) { //add colorpicker to options pa
 	wp_enqueue_script('media-upload');
     wp_enqueue_script('thickbox');
 	wp_enqueue_script( 'wp-color-picker-scripts', plugins_url( 'js/scripts.js', __FILE__ ), array( 'jquery', 'wp-color-picker','media-upload','thickbox' ), false, true );
+	wp_enqueue_script( 'wp-color-picker-alpha1', plugins_url( 'js/wp-color-picker-alpha.js', __FILE__ ), array( 'wp-color-picker' ), '1.1', $in_footer );
 	wp_enqueue_style( 'wp-color-picker' );
 	wp_enqueue_style('thickbox');
 }
@@ -198,6 +199,7 @@ add_action( 'admin_enqueue_scripts', 'wlpd_add_color_picker' );//add color picke
 		<a href="?page=login-page-designer&amp;tab=form_settings" class="nav-tab <?php echo $active_tab == 'form_settings' ? 'nav-tab-active' : ''; ?>"><?php _e('Form Settings', 'wpchandra'); ?></a>
 		<a href="?page=login-page-designer&amp;tab=button_settings" class="nav-tab <?php echo $active_tab == 'button_settings' ? 'nav-tab-active' : ''; ?>"><?php _e('Button Settings', 'wpchandra'); ?></a>
 		<a href="?page=login-page-designer&amp;tab=textbox_settings" class="nav-tab <?php echo $active_tab == 'textbox_settings' ? 'nav-tab-active' : ''; ?>"><?php _e('Textbox Settings', 'wpchandra'); ?></a>
+		<a href="?page=login-page-designer&amp;tab=donate_now" class="nav-tab <?php echo $active_tab == 'donate_now' ? 'nav-tab-active' : ''; ?>"><?php _e('Donate Now', 'wpchandra'); ?></a>
 	</h2>
 	
 		
@@ -284,15 +286,15 @@ add_action( 'admin_enqueue_scripts', 'wlpd_add_color_picker' );//add color picke
 		       <tr>
 					<th scope="row"><label for="wlpd_login_background_color"><?php _e('Background Color'); ?></label></th>
 					<td valign="top">
-						<input type="text" name="wlpd_login_background_color"  id="wlpd_login_background_color" value="<?php echo stripslashes(get_option('wlpd_login_background_color')); ?>"  />
-						<p class="description"><?php _e('Change your body background color. Default color is #00aeef'); ?></p>
+						<input type="text" name="wlpd_login_background_color" data-alpha="true"  id="wlpd_login_background_color" value="<?php echo stripslashes(get_option('wlpd_login_background_color')); ?>"  />
+						<p class="description"><?php _e('Change your body background color. Default color is rgba(0, 0, 0, 0.34)'); ?></p>
 					</td>
 				</tr>
 				
 				 <tr>
 					<th scope="row"><label for="wlpd_login_link_color"><?php _e('Link Color'); ?></label></th>
 					<td valign="top">
-						<input type="text" name="wlpd_login_link_color"  id="wlpd_login_link_color" value="<?php echo stripslashes(get_option('wlpd_login_link_color')); ?>"  />
+						<input type="text" name="wlpd_login_link_color"  data-alpha="true" id="wlpd_login_link_color" value="<?php echo stripslashes(get_option('wlpd_login_link_color')); ?>"  />
 						<p class="description"><?php _e('Change lost your password or back to color. Default color is #ffffff'); ?></p>
 					</td>
 				</tr>
@@ -300,8 +302,8 @@ add_action( 'admin_enqueue_scripts', 'wlpd_add_color_picker' );//add color picke
 				 <tr>
 					<th scope="row"><label for="wlpd_login_link_hover_color"><?php _e('Link Hover Color'); ?></label></th>
 					<td valign="top">
-						<input type="text" name="wlpd_login_link_hover_color"  id="wlpd_login_link_hover_color" value="<?php echo stripslashes(get_option('wlpd_login_link_hover_color')); ?>"  />
-						<p class="description"><?php _e('Change lost your password or back to hover color. Default color is #5BD0FC'); ?></p>
+						<input type="text" name="wlpd_login_link_hover_color" data-alpha="true"  id="wlpd_login_link_hover_color" value="<?php echo stripslashes(get_option('wlpd_login_link_hover_color')); ?>"  />
+						<p class="description"><?php _e('Change lost your password or back to hover color. Default color is rgba(234, 234, 234, 0.52)'); ?></p>
 					</td>
 				</tr>
 				
@@ -422,7 +424,7 @@ add_action( 'admin_enqueue_scripts', 'wlpd_add_color_picker' );//add color picke
 				<tr>
 					<th scope="row"><label for="wlpd_login_form_label_color"><?php _e('Label Color'); ?></label></th>
 					<td valign="top">
-						<input type="text" name="wlpd_login_form_label_color"  id="wlpd_login_form_label_color" value="<?php echo stripslashes(get_option('wlpd_login_form_label_color')); ?>"  />
+						<input type="text" name="wlpd_login_form_label_color" data-alpha="true" id="wlpd_login_form_label_color" value="<?php echo stripslashes(get_option('wlpd_login_form_label_color')); ?>"  />
 						<p class="description"><?php _e('Change login form label color. Default color is #ffffff'); ?></p>
 					</td>
 				</tr>
@@ -437,8 +439,8 @@ add_action( 'admin_enqueue_scripts', 'wlpd_add_color_picker' );//add color picke
 				<tr>
 					<th scope="row"><label for="wlpd_login_form_bg"><?php _e('Background Color'); ?></label></th>
 					<td valign="top">
-						<input type="text" name="wlpd_login_form_bg"  id="wlpd_login_form_bg" value="<?php echo stripslashes(get_option('wlpd_login_form_bg')); ?>"  />
-						<p class="description"><?php _e('Change login form background color. Default color is #00aeef'); ?></p>
+						<input type="text" name="wlpd_login_form_bg" data-alpha="true" id="wlpd_login_form_bg" value="<?php echo stripslashes(get_option('wlpd_login_form_bg')); ?>"  />
+						<p class="description"><?php _e('Change login form background color. Default color is rgba(0, 0, 0, 0.34)'); ?></p>
 					</td>
 				</tr>
 				
@@ -453,8 +455,8 @@ add_action( 'admin_enqueue_scripts', 'wlpd_add_color_picker' );//add color picke
 				<tr>
 					<th scope="row"><label for="wlpd_login_form_border_color"><?php _e('Border Color'); ?></label></th>
 					<td valign="top">
-						<input type="text" name="wlpd_login_form_border_color"  id="wlpd_login_form_border_color" value="<?php echo stripslashes(get_option('wlpd_login_form_border_color')); ?>"  />
-						<p class="description"><?php _e('Change login form background color. Default color is #5BD0FC'); ?></p>
+						<input type="text" name="wlpd_login_form_border_color" data-alpha="true" id="wlpd_login_form_border_color" value="<?php echo stripslashes(get_option('wlpd_login_form_border_color')); ?>"  />
+						<p class="description"><?php _e('Change login form background color. Default color is rgba(234, 234, 234, 0.52)'); ?></p>
 					</td>
 				</tr>
 				
@@ -495,8 +497,8 @@ add_action( 'admin_enqueue_scripts', 'wlpd_add_color_picker' );//add color picke
 				<tr>
 					<th scope="row"><label for="wlpd_login_form_submit_bg"><?php _e('Background Color'); ?></label></th>
 					<td valign="top">
-						<input type="text" name="wlpd_login_form_submit_bg"  id="wlpd_login_form_submit_bg" value="<?php echo stripslashes(get_option('wlpd_login_form_submit_bg')); ?>"  />
-						<p class="description"><?php _e('Change login form submit button background color. Default color is #00aeef'); ?></p>
+						<input type="text" name="wlpd_login_form_submit_bg" data-alpha="true" id="wlpd_login_form_submit_bg" value="<?php echo stripslashes(get_option('wlpd_login_form_submit_bg')); ?>"  />
+						<p class="description"><?php _e('Change login form submit button background color. Default color is rgba(0, 0, 0, 0.34)'); ?></p>
 					</td>
 				</tr>
 				
@@ -511,8 +513,8 @@ add_action( 'admin_enqueue_scripts', 'wlpd_add_color_picker' );//add color picke
 				<tr>
 					<th scope="row"><label for="wlpd_login_form_submit_border_color"><?php _e('Border Color'); ?></label></th>
 					<td valign="top">
-						<input type="text" name="wlpd_login_form_submit_border_color"  id="wlpd_login_form_submit_border_color" value="<?php echo stripslashes(get_option('wlpd_login_form_submit_border_color')); ?>"  />
-						<p class="description"><?php _e('Change login form submit button border color. Default color is #5BD0FC'); ?></p>
+						<input type="text" name="wlpd_login_form_submit_border_color" data-alpha="true" id="wlpd_login_form_submit_border_color" value="<?php echo stripslashes(get_option('wlpd_login_form_submit_border_color')); ?>"  />
+						<p class="description"><?php _e('Change login form submit button border color. Default color is rgba(234, 234, 234, 0.52)'); ?></p>
 					</td>
 				</tr>
 				
@@ -520,7 +522,7 @@ add_action( 'admin_enqueue_scripts', 'wlpd_add_color_picker' );//add color picke
 					<th scope="row"><label for="wlpd_login_form_submit_border_radius"><?php _e('Border Radius'); ?></label></th>
 				<td valign="top">
 					<input name="wlpd_login_form_submit_border_radius" type="number" step="0" max="50" id="wlpd_login_form_submit_border_radius" value="<?php echo get_option('wlpd_login_form_submit_border_radius'); ?>" class="small-text"> px
-					<p class="description"><?php _e('Change login form submit button border radius. Default border radius is 10px'); ?></p>
+					<p class="description"><?php _e('Change login form submit button border radius. Default border radius is 0px'); ?></p>
 				</td>
 				</tr>
 				
@@ -528,7 +530,7 @@ add_action( 'admin_enqueue_scripts', 'wlpd_add_color_picker' );//add color picke
 				<tr>
 					<th scope="row"><label for="wlpd_login_form_submit_hover_bg"><?php _e('Hover Background Color'); ?></label></th>
 					<td valign="top">
-						<input type="text" name="wlpd_login_form_submit_hover_bg"  id="wlpd_login_form_submit_hover_bg" value="<?php echo stripslashes(get_option('wlpd_login_form_submit_hover_bg')); ?>"  />
+						<input type="text" name="wlpd_login_form_submit_hover_bg" data-alpha="true" id="wlpd_login_form_submit_hover_bg" value="<?php echo stripslashes(get_option('wlpd_login_form_submit_hover_bg')); ?>"  />
 						<p class="description"><?php _e('Change login form submit button hover background color. Default color is #029CD5'); ?></p>
 					</td>
 				</tr>
@@ -544,7 +546,7 @@ add_action( 'admin_enqueue_scripts', 'wlpd_add_color_picker' );//add color picke
 				<tr>
 					<th scope="row"><label for="wlpd_login_form_submit_hover_border_color"><?php _e('Hover Border Color'); ?></label></th>
 					<td valign="top">
-						<input type="text" name="wlpd_login_form_submit_hover_border_color"  id="wlpd_login_form_submit_hover_border_color" value="<?php echo stripslashes(get_option('wlpd_login_form_submit_hover_border_color')); ?>"  />
+						<input type="text" name="wlpd_login_form_submit_hover_border_color" data-alpha="true" id="wlpd_login_form_submit_hover_border_color" value="<?php echo stripslashes(get_option('wlpd_login_form_submit_hover_border_color')); ?>"  />
 						<p class="description"><?php _e('Change login form submit button hover border color. Default color is #0080B0'); ?></p>
 					</td>
 				</tr>
@@ -578,8 +580,8 @@ add_action( 'admin_enqueue_scripts', 'wlpd_add_color_picker' );//add color picke
 				<tr>
 					<th scope="row"><label for="wlpd_login_form_textbox_bg"><?php _e('Background Color'); ?></label></th>
 					<td valign="top">
-						<input type="text" name="wlpd_login_form_textbox_bg"  id="wlpd_login_form_textbox_bg" value="<?php echo stripslashes(get_option('wlpd_login_form_textbox_bg')); ?>"  />
-						<p class="description"><?php _e('Change login form textbox background color. Default color is #00aeef'); ?></p>
+						<input type="text" name="wlpd_login_form_textbox_bg" data-alpha="true"  id="wlpd_login_form_textbox_bg" value="<?php echo stripslashes(get_option('wlpd_login_form_textbox_bg')); ?>"  />
+						<p class="description"><?php _e('Change login form textbox background color. Default color is rgba(0, 0, 0, 0.34)'); ?></p>
 					</td>
 				</tr>
 				
@@ -594,8 +596,8 @@ add_action( 'admin_enqueue_scripts', 'wlpd_add_color_picker' );//add color picke
 				<tr>
 					<th scope="row"><label for="wlpd_login_form_textbox_border_color"><?php _e('Border Color'); ?></label></th>
 					<td valign="top">
-						<input type="text" name="wlpd_login_form_textbox_border_color"  id="wlpd_login_form_textbox_border_color" value="<?php echo stripslashes(get_option('wlpd_login_form_textbox_border_color')); ?>"  />
-						<p class="description"><?php _e('Change login form textbox border color. Default color is #5BD0FC'); ?></p>
+						<input type="text" name="wlpd_login_form_textbox_border_color" data-alpha="true" id="wlpd_login_form_textbox_border_color" value="<?php echo stripslashes(get_option('wlpd_login_form_textbox_border_color')); ?>"  />
+						<p class="description"><?php _e('Change login form textbox border color. Default color is rgba(234, 234, 234, 0.52)'); ?></p>
 					</td>
 				</tr>
 				
@@ -611,7 +613,7 @@ add_action( 'admin_enqueue_scripts', 'wlpd_add_color_picker' );//add color picke
 				<tr>
 					<th scope="row"><label for="wlpd_login_form_textbox_hover_bg"><?php _e('Hover Background Color'); ?></label></th>
 					<td valign="top">
-						<input type="text" name="wlpd_login_form_textbox_hover_bg"  id="wlpd_login_form_textbox_hover_bg" value="<?php echo stripslashes(get_option('wlpd_login_form_textbox_hover_bg')); ?>"  />
+						<input type="text" name="wlpd_login_form_textbox_hover_bg" data-alpha="true" id="wlpd_login_form_textbox_hover_bg" value="<?php echo stripslashes(get_option('wlpd_login_form_textbox_hover_bg')); ?>"  />
 						<p class="description"><?php _e('Change login form textbox hover background color. Default color is #029CD5'); ?></p>
 					</td>
 				</tr>
@@ -627,7 +629,7 @@ add_action( 'admin_enqueue_scripts', 'wlpd_add_color_picker' );//add color picke
 				<tr>
 					<th scope="row"><label for="wlpd_login_form_textbox_hover_border_color"><?php _e('Hover Border Color'); ?></label></th>
 					<td valign="top">
-						<input type="text" name="wlpd_login_form_textbox_hover_border_color"  id="wlpd_login_form_textbox_hover_border_color" value="<?php echo stripslashes(get_option('wlpd_login_form_textbox_hover_border_color')); ?>"  />
+						<input type="text" name="wlpd_login_form_textbox_hover_border_color" data-alpha="true" id="wlpd_login_form_textbox_hover_border_color" value="<?php echo stripslashes(get_option('wlpd_login_form_textbox_hover_border_color')); ?>"  />
 						<p class="description"><?php _e('Change login form  textbox hover border color. Default color is #0080B0'); ?></p>
 					</td>
 				</tr>
@@ -643,8 +645,10 @@ add_action( 'admin_enqueue_scripts', 'wlpd_add_color_picker' );//add color picke
 		</div>
 		</form>
 		<?php } ?>
-
-	
+		
+		<?php if($active_tab == 'donate_now') { ?>
+			<?php include 'inc/lib/ddn.php'; ?>
+	    <?php } ?>
 	
 	</div>
 
