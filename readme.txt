@@ -101,6 +101,13 @@ There are no FAQ just yet
 
 
 == Changelog ==
-Version 1.0 released.
 
-Version 1.1 released.
+= 1.0 =
+
+* Version 1.0 released.
+
+= 1.1 =
+
+* Version 1.1 released.
+* Set alpha.
+
