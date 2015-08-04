@@ -45,6 +45,7 @@ You can easy way to setting & install this plugin.
 * Login Form textbox border radius.
 * Login Form textbox hover border size.
 * Login Form textbox hover border color.
+* Login Form textbox hover border color.
 * Login Form textbox hover border style.
 * Login Form Button border size.
 * Login Form Button border color.
@@ -53,17 +54,9 @@ You can easy way to setting & install this plugin.
 * Login Form Button border radius.
 * Login Form Button hover border size.
 * Login Form Button hover border color.
+* Login Form Button hover border color.
 * Login Form Button hover border style.
 * And so more coming soon.
-
-= Version 1.1 released. =
-
-* Set Login Form Background color alpha(r,g,b,a).
-* Set Login Form Button border color alpha(r,g,b,a).
-* Set Login Form Button hover border color alpha(r,g,b,a).
-* Set Login Form textbox border color alpha(r,g,b,a).
-* Set Login Form textbox hover border color alpha(r,g,b,a).
-* Set Login Form border color alpha(r,g,b,a).
 
 
 == Installation ==
@@ -108,18 +101,5 @@ There are no FAQ just yet
 
 
 == Changelog ==
-
-= 1.0 =
-
-* Version 1.0 released.
-
-= 1.1 =
-
-* Version 1.1 released.
-* Set Login Form Background color alpha(r,g,b,a).
-* Set Login Form Button border color alpha(r,g,b,a).
-* Set Login Form Button hover border color alpha(r,g,b,a).
-* Set Login Form textbox border color alpha(r,g,b,a).
-* Set Login Form textbox hover border color alpha(r,g,b,a).
-* Set Login Form border color alpha(r,g,b,a).
+Version 1.0 released.
 
