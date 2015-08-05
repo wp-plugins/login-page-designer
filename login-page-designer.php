@@ -3,7 +3,7 @@
  *Plugin Name: Login Page Designer 
  *Plugin URI: https://wordpress.org/plugins/login-page-designer/ 
  *Description: Login page designer provides you to easy way to customize the appearance of the wordPress login page with many options. 
- *Version: 1.0
+ *Version: 1.1
  *Author: Chandrakesh Kumar    
  *Author URI:http://www.wpchandra.com/         
  *License: GPLv2  
@@ -153,6 +153,7 @@ function wlpd_add_color_picker( $hook_suffix ) { //add colorpicker to options pa
 	wp_enqueue_script( 'wp-color-picker' );
 	wp_enqueue_script('media-upload');
     wp_enqueue_script('thickbox');
+	if($_GET['page']=='login-page-designer' AND is_admin())
 	wp_enqueue_script( 'wp-color-picker-scripts', plugins_url( 'js/scripts.js', __FILE__ ), array( 'jquery', 'wp-color-picker','media-upload','thickbox' ), false, true );
 	wp_enqueue_style( 'wp-color-picker' );
 	wp_enqueue_style('thickbox');
