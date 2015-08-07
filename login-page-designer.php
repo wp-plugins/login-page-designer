@@ -1,5 +1,5 @@
 <?php
-/* 
+/*  
  *Plugin Name: Login Page Designer 
  *Plugin URI: https://wordpress.org/plugins/login-page-designer/ 
  *Description: Login page designer provides you to easy way to customize the appearance of the wordPress login page with many options. 
