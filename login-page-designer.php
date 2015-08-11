@@ -6,7 +6,7 @@
  *Version: 1.1 
  *Author: Chandrakesh Kumar    
  *Author URI:http://www.wpchandra.com/            
- *License: GPLv2    
+ *License: GPLv2     
  */       
    
 define('wlpd_blog_name',get_bloginfo('name'));   
